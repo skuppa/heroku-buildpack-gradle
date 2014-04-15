@@ -13,7 +13,7 @@ CACHE_DIR=$2
 ENV_DIR=$3
 
 GRADLE_DIST="gradle-1.0-milestone-5"
-GRADLE_TASK="war"
+GRADLE_TASK="assemble"
 
 curl --silent --location http://heroku-jvm-common.s3.amazonaws.com/jvm-buildpack-common.tar.gz | tar xz
 . bin/util
@@ -53,7 +53,7 @@ else
   BUILDCMD="gradle -I $OPT_DIR/init.gradle"
 fi
 
-BUILDCMD="$BUILDCMD $GRADLE_TASK"
+BUILDCMD="$BUILDCMD --info $GRADLE_TASK"
 
 cd $BUILD_DIR
 
