@@ -55,7 +55,7 @@ else
   BUILDCMD="gradle -I $OPT_DIR/init.gradle"
 fi
 
-BUILDCMD="$BUILDCMD $GRADLE_TASK --info --parallel"
+BUILDCMD="$BUILDCMD $GRADLE_TASK --info"
 
 cd $BUILD_DIR
 
