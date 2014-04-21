@@ -52,7 +52,7 @@ else
     curl --silent --location $GRADLE_URL | tar xz
     echo " done"
   fi
-  BUILDCMD="gradle -I $OPT_DIR/init.gradle"
+  BUILDCMD="gradle"
 fi
 
 BUILDCMD="$BUILDCMD $GRADLE_TASK --info"
